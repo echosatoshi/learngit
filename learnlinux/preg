@@ -1,0 +1,18 @@
+re(reqular expression) 通过一些特殊字符的排列 用以搜索替换删除 一列或多列字符串 支持正则grep vim sed awk
+
+[:alnum:][:alpha:][:upper:][:lower:][:digit:]
+
+exprot LANG=C
+BRE ERE 
+^ $ . * ? [] [^] \
+\{\}\(\)向后引用
+(子组)(?:不捕获){}
+
+grep
+grep -e
+sed -e -n p s d sed -e '2,5d'-e sed 's///g'
+awk 'BEGIN{} {""} END{}' NR NF FS $0 $1 ${10}
+
+diff cmp
+
+
