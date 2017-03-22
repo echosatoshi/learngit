@@ -1,0 +1,34 @@
+硬件 核心（kernel）shell
+/etc/shells 用户登录时,系统分配一个shell(/etc/passwd账号管理)
+shell种类：Bourne-Shell(sh) Bourne-Again-Shell(bash) C-Shell K-Shell TCSH 
+
+bash优点：
+	history tab alias jobs,bg,fg shellscript wildcard(通配符) 内建命令(type)
+
+变量:多用户多任务,每个人都有一个bash 
+全局变量:PATH HOME SHELL MAIL.
+echo export env set unset var=value "" '' \ `` $(指令) PATH="$PATH":/home/bin
+PS1: \d(星期 月 日) \H(完整主机名)...(man bash)
+$当前shell PID ?上个命令的回传值
+作用域: 全局变量=环境变量 局部变量=自定义变量
+read(键盘读入 提示+时限) declare(-a array -i int -x==export +x==取消 -r==readonly -p类型)
+var[1]="阿扒村" echo ${var[1]}
+变量的删除和替换 # % / -
+	echo $path
+	${path#短右删除} ${path##长右删除} ${path?短左删除} ${path??短左删除}
+	${path/abc/ABC}取代一个 ${path//abc/ABC}取代所有
+	${path-abc} 默认值
+
+通配符
+* ? [] [-] [^]
+特殊字符
+# \ | ; ~ $ & !(not) /路径分隔 > >> < <<重定向 '' "变量置换" `先执行`=$() (子shell) {命令区块} 
+stdin 0 stdout 1 stderr 2
+/dev/null 写入同一个文件 2>&1
+
+cut -d'分隔符' -f fileds
+cut -c 字符区间
+grep 'root'; grep -v 'root'; ...
+sort -t'分割' -r反序 -u uniq -k filed -n num
+wc -l -w -c
+tee 标注输入两个去向1标准输出 2文件 tee file

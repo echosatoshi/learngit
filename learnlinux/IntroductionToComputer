@@ -1,0 +1,17 @@
+下达指令:command [-options] parameter1 parameter2...
+说明 0:一行指令中第一个输入端部分绝对是 command 或 可执行文件
+     1:指令选项 -h 或 全名 --help 或 ps aux
+     2:parameter1 parameter2..为options的参数 或者是 command的参数
+     3:按下enter后指令立即执行
+     4:若指令太长 \跳脱enter 注意:\后立即接特殊字符,才能跳脱
+
+其他bash介绍
+
+计算器bc 日历cal 时间date 语言LANG 本地local
+热键 tab ctrl-c(终止命令) ctrl-d(结束输入) ctrl-m(enter) ctrl-s(暂停输出) ctrl-q(恢复输出) ctrl-u(删除命令) ctrl-z(暂停命令) 
+帮助 man info --help
+man 用了less翻页 操作同less 空格下一页 b上一页 hjkl左下上 /string 下查找 ?string上查找 n下一个N上一个 q结束
+/usr/share/doc 帮助文档
+
+正确关机
+who network sync shutdown
